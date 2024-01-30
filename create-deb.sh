@@ -56,7 +56,7 @@ for target in ${targets[@]}; do
   elif [[ $target == "GENERIC_ARM" ]]; then
     cmake .. -DARM64=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=aarch64-linux-gnu-gcc-8 -DARM_DYNAREC=ON || error "Failed to run cmake."
   elif [[ $target == "TEGRA_T194" ]]; then
-    cmake .. -D$target=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=aarch64-linux-gnu-gcc-13 -DARM_DYNAREC=ON || error "Failed to run cmake."
+    cmake .. -D$target=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=aarch64-linux-gnu-gcc-9 -DARM_DYNAREC=ON || error "Failed to run cmake."
   elif [[ $target == "TEGRA_T294" ]]; then
     cmake .. -D$target=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_C_COMPILER=aarch64-linux-gnu-gcc-13 -DARM_DYNAREC=ON || error "Failed to run cmake."
   else
